@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video Games</title>
+    <!-- Daisy-UI and Tailwind Css Links  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- style css link  -->
+    <link rel="stylesheet" href="Style/style.css" />
+  </head>
+
+  <body class="font-poppins">
+    <main
+      class="bg-[#010313] min-h-screen bg-[url(images/background.png)] bg-no-repeat bg-top bg-[length:35%_auto]"
+    >
+      <!-- Home Section 01 -->
+      <section id="home-screen" class="home">
+        <div
+          class="flex flex-col items-center justify-center text-white min-h-screen space-y-6"
+        >
+          <h1 class="text-[120px] font-anton text-white">ALPHABET CLASH</h1>
+          <p>Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
+          <button onclick="utilityFunction()" class="btn">Play Now</button>
+        </div>
+      </section>
+      <!-- Play Ground Section 02 -->
+      <section id="play-ground" class="hidden">
+        <div class="flex flex-col justify-center min-h-screen space-y-6">
+          <!-- screen  -->
+          <div class="flex flex-col items-center justify-center">
+            <div
+              class="bg-[#FFFFFFB3] border-[20px] rounded-xl border-[#010313CC] w-[900px] h-[300px]"
+            >
+              <div
+                id="show-Alphabet"
+                class="grid place-content-center h-80 text-9xl font-semibold uppercase"
+              >
+                Y
+              </div>
+            </div>
+          </div>
+          <!-- keyboard -->
+          <div
+            id="keyboard"
+            class="flex flex-col items-center justify-center font-bold text-xl"
+          >
+            <div class="my-1 flex justify-center gap-2">
+              <kbd id="q" class="kbd w-12 h-12 text-lg">q</kbd>
+              <kbd id="w" class="kbd w-12 h-12 text-lg">w</kbd>
+              <kbd id="e" class="kbd w-12 h-12 text-lg">e</kbd>
+              <kbd id="r" class="kbd w-12 h-12 text-lg">r</kbd>
+              <kbd id="t" class="kbd w-12 h-12 text-lg">t</kbd>
+              <kbd id="y" class="kbd w-12 h-12 text-lg">y</kbd>
+              <kbd id="u" class="kbd w-12 h-12 text-lg">u</kbd>
+              <kbd id="i" class="kbd w-12 h-12 text-lg">i</kbd>
+              <kbd id="o" class="kbd w-12 h-12 text-lg">o</kbd>
+              <kbd id="p" class="kbd w-12 h-12 text-lg">p</kbd>
+            </div>
+
+            <div class="my-1 flex justify-center gap-2">
+              <kbd id="a" class="kbd w-12 h-12 text-lg">a</kbd>
+              <kbd id="s" class="kbd w-12 h-12 text-lg">s</kbd>
+              <kbd id="d" class="kbd w-12 h-12 text-lg">d</kbd>
+              <kbd id="f" class="kbd w-12 h-12 text-lg">f</kbd>
+              <kbd id="g" class="kbd w-12 h-12 text-lg">g</kbd>
+              <kbd id="h" class="kbd w-12 h-12 text-lg">h</kbd>
+              <kbd id="j" class="kbd w-12 h-12 text-lg">j</kbd>
+              <kbd id="k" class="kbd w-12 h-12 text-lg">k</kbd>
+              <kbd id="l" class="kbd w-12 h-12 text-lg">l</kbd>
+            </div>
+
+            <div class="my-1 flex justify-center gap-2">
+              <kbd id="z" class="kbd w-12 h-12 text-lg">z</kbd>
+              <kbd id="x" class="kbd w-12 h-12 text-lg">x</kbd>
+              <kbd id="c" class="kbd w-12 h-12 text-lg">c</kbd>
+              <kbd id="v" class="kbd w-12 h-12 text-lg">v</kbd>
+              <kbd id="b" class="kbd w-12 h-12 text-lg">b</kbd>
+              <kbd id="n" class="kbd w-12 h-12 text-lg">n</kbd>
+              <kbd id="m" class="kbd w-12 h-12 text-lg">m</kbd>
+              <kbd id="/" class="kbd w-12 h-12 text-lg">/</kbd>
+            </div>
+          </div>
+          <!-- score  -->
+          <div class="flex justify-around items-center">
+            <button
+              class="btn rounded-full bg-[#894189] text-white border-none font-normal"
+            >
+              Life <img src="images/heart.svg" alt="" />
+              <span id="current-life">5</span>
+            </button>
+            <button
+              class="btn rounded-full bg-[#360490] text-white border-none font-normal"
+            >
+              Score <img src="images/dollar.svg" alt="" /><span
+                id="score-update"
+                >0</span
+              >
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- Score Board Section 03 -->
+      <section
+        id="final-score"
+        class="hidden flex items-center justify-center min-h-screen"
+      >
+        <div
+          class="flex flex-col items-center justify-center w-[396px] h-[282px] text-white bg-[#FFFFFF33] rounded-xl space-y-5"
+        >
+          <h1 class="text-2xl font-semibold">Game Over !</h1>
+          <h1 class="text-[64px] font-bold">
+            <span>Score:</span> <span id="last-score">14</span>
+          </h1>
+          <button onclick="utilityFunction()" class="btn">Play Again</button>
+          <p>Practice will make you Pro</p>
+        </div>
+      </section>
+    </main>
+    <!-- =============Java-Script ====================== -->
+    <script src="Script-File/Utility-Function.js"></script>
+    <script src="Script-File/General-Function.js"></script>
+    <!-- ================== Practice ============== -->
+    <script src="Script-File/manual-function.js"></script>
+    <script src="Script-File/call-Function.js"></script>
+  </body>
+</html>
