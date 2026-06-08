@@ -17,16 +17,23 @@ function showBgColorChange (element){
 }
 // Remove keyboard color change 
 function removeBgColorChange (element){
-    const bgColor = document.getElementById(element)
-    bgColor.classList.remove('bg-yellow-500')
+    const bgRemoveColor = document.getElementById(element)
+    bgRemoveColor.classList.remove('bg-yellow-500')
 }
 
 //   show the display Random alphabet 
 function showDisplayRandomAlphabet (element){
     const showRandomAlphabet = document.getElementById(element)
+    const setDisplay = showRandomAlphabet.innerText
     
 
     return showRandomAlphabet
+}
+// set display text 
+function setDisplay (elementId,value){
+    const elements = document.getElementById(elementId)
+    elements.innerText = value
+
 }
 // Random get a Alphabet 
 function randomAlphabets (){
@@ -40,4 +47,11 @@ function randomAlphabets (){
     const alphabet = newAlphabets[index]
 
     return alphabet
+}
+function updatedScore (element){
+    const updateScores = document.getElementById(element)
+    const scoresUpdate = updateScores.innerText
+    const score = parseInt(scoresUpdate)
+    return score
+    console.log(score);
 }
